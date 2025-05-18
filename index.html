@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Математичний помічник</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo" id="logo">
+                <i class="fas fa-user-graduate"></i>
+                <span>MathHelper</span>
+                <div class="author-tooltip">
+                    <div class="author-info">
+                        <h4>Про автора</h4>
+                            <p>Ім'я: Колесникова Катерина</p>
+                            <p>Група: П-312</p>
+                            <p>Коледж: МПФК</p>
+                    </div>
+                </div>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#sums" class="nav-link active"><i class="fas fa-money-bill-wave"></i> Суми прописом</a></li>
+                    <li><a href="#equations" class="nav-link"><i class="fas fa-square-root-alt"></i> Квадратні рівняння</a></li>
+                    <li><a href="#progressions" class="nav-link"><i class="fas fa-chart-line"></i> Прогресії</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section id="sums" class="task-section active">
+            <div class="container">
+                <h2><i class="fas fa-money-bill-wave"></i> Суми прописом</h2>
+                <div class="task-description">
+                    <p>Введіть число (ціле або з двома знаками після коми), щоб отримати його текстове представлення.</p>
+                </div>
+                <div class="input-group">
+                    <input type="text" id="number-input" placeholder="Наприклад: 1234.56">
+                    <button id="convert-btn" class="btn">Конвертувати</button>
+                </div>
+                <div class="result-container">
+                    <h3>Результат:</h3>
+                    <div id="sum-result" class="result-box"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="equations" class="task-section">
+            <div class="container">
+                <h2><i class="fas fa-square-root-alt"></i> Квадратні рівняння</h2>
+                <div class="task-description">
+                    <p>Розв'яжіть квадратне рівняння виду ax² + bx + c = 0. Введіть коефіцієнти:</p>
+                </div>
+                <div class="equation-inputs">
+                    <div class="input-row">
+                        <input type="number" id="a-coeff" placeholder="a">
+                        <span>x² +</span>
+                    </div>
+                    <div class="input-row">
+                        <input type="number" id="b-coeff" placeholder="b">
+                        <span>x +</span>
+                    </div>
+                    <div class="input-row">
+                        <input type="number" id="c-coeff" placeholder="c">
+                        <span>= 0</span>
+                    </div>
+                </div>
+                <button id="solve-btn" class="btn">Розв'язати</button>
+                <div class="result-container">
+                    <h3>Розв'язок:</h3>
+                    <div id="equation-result" class="result-box"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="progressions" class="task-section">
+            <div class="container">
+                <h2><i class="fas fa-chart-line"></i> Прогресії</h2>
+                <div class="task-description">
+                    <p>Введіть послідовність чисел (розділіть комами), щоб визначити тип прогресії та її суму.</p>
+                </div>
+                <div class="input-group">
+                    <input type="text" id="sequence-input" placeholder="Наприклад: 2, 5, 8, 11">
+                    <button id="analyze-btn" class="btn">Аналізувати</button>
+                </div>
+                <div class="result-container">
+                    <h3>Результат:</h3>
+                    <div id="progression-result" class="result-box"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
